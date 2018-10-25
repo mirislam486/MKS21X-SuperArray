@@ -4,20 +4,25 @@ public class SuperArray{
   public SuperArray(String[] newAr){
     arr = new String[newAr, length]
     for(int i; i < newAr.length, i++){
-      arr[i] = newA[i]
+      arr[i] = newAr[i]
     }
   }
 
 }
   public void clear(){
-    
+      String[] arr = new String[10]
+      System.out.println(arr)
   }
 
   public int size(){
-
+      int counter = 0;
+      for(int i = 0; i < arr.length; i++){
+        counter += 1;
+      }
+      System.out.println(counter);
   }
 
-  public boolean inEmpty(){
+  public boolean isEmpty(){
 
   }
 
