@@ -32,23 +32,31 @@ public class SuperArray{
   public boolean add(String element){
     String[] arr = new String[arr.length + 1];
     ArrPlus[arr.length - 1] = element;
-    System.out.println(arr)
+    return true
   }
 
   public String get(int index){
-
+    if(index > arr.length){
+      return "Error: Index out of bound";
+    }
+    return arr[index];
   }
 
   public String set(int index, String element){
+    if(index > arr.length){
+      return "Error: Index out of bound";
+    }
 
   }
 
   public String toString(){
-
+      for(int i = 0; i < arr.length; i++){
+        System.out.println(arr[i])
+      }
   }
 
   public boolean contains(String element){
-
+      
   }
 
   public void add(int index, String element){
