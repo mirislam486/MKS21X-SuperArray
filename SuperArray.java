@@ -23,11 +23,16 @@ public class SuperArray{
   }
 
   public boolean isEmpty(){
-
+    if(arr.length == 0){
+      return true;
+    }
+    return false;
   }
 
   public boolean add(String element){
-
+    String[] arr = new String[arr.length + 1];
+    ArrPlus[arr.length - 1] = element;
+    System.out.println(arr)
   }
 
   public String get(int index){
