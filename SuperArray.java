@@ -1,18 +1,19 @@
 public class SuperArray{
 
-  String[] arr;
-  public SuperArray(String[] newAr){
-    arr = new String[newAr, length]
-    for(int i; i < newAr.length, i++){
-      arr[i] = newAr[i]
-    }
+  private String[] arr;
+
+  SuperArray(String[] newAr){
+    arr = new String[10];
   }
 
-}
+
+
   public void clear(){
       String[] arr = new String[10]
       System.out.println(arr)
   }
+
+
 
   public int size(){
       int counter = 0;
@@ -22,6 +23,8 @@ public class SuperArray{
       System.out.println(counter);
   }
 
+
+
   public boolean isEmpty(){
     if(arr.length == 0){
       return true;
@@ -29,11 +32,15 @@ public class SuperArray{
     return false;
   }
 
+
+
   public boolean add(String element){
     String[] arr = new String[arr.length + 1];
     ArrPlus[arr.length - 1] = element;
     return true
   }
+
+
 
   public String get(int index){
     if(index > arr.length){
@@ -42,12 +49,18 @@ public class SuperArray{
     return arr[index];
   }
 
+
+
   public String set(int index, String element){
+    oldEl = arr[index]
     if(index > arr.length){
       return "Error: Index out of bound";
     }
-
+    arr[index] = element;
+    System.out.println(oldEl);
   }
+
+
 
   public String toString(){
       for(int i = 0; i < arr.length; i++){
@@ -55,21 +68,40 @@ public class SuperArray{
       }
   }
 
+
+
   public boolean contains(String element){
-      
+      int counter = 1;
+      for(int i = 0; i < arr.lenth;i++){
+        if (arr[i].equals(element)){
+          counter += 1;
+        }
+      }
+      if (counter >= 1){
+        return true;
+      }
+      return false;
   }
+
+
 
   public void add(int index, String element){
 
   }
 
+
+
   public int lastIndexOf(String element){
 
   }
 
+
+
   public String remove(int index){
 
   }
+
+
 
   public boolean remove(String element){
 
