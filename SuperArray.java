@@ -9,8 +9,8 @@ public class SuperArray{
 
 
   public void clear(){
-      String[] arr = new String[10]
-      System.out.println(arr)
+      String[] arr = new String[10];
+      System.out.println(arr);
   }
 
 
@@ -37,7 +37,7 @@ public class SuperArray{
   public boolean add(String element){
     String[] arr = new String[arr.length + 1];
     ArrPlus[arr.length - 1] = element;
-    return true
+    return true;
   }
 
 
@@ -98,8 +98,19 @@ public class SuperArray{
 
 
   public String remove(int index){
-
+    if(index <= arr.length){
+      newArr = new String[arr.length - 1];
+      for(int i = 0; i < index; i++){
+        arr[i] = newArr[i];
+      }
+      for(int i = index; i < arr.length; i++){
+        arr[i + 1] = newArr[i];
+      }
+      System.out.println(arr[index]);
+    }
+    System.out.println("Error: Index out of bound")
   }
+  
 
 
 
